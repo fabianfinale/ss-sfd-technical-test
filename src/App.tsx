@@ -1,10 +1,14 @@
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
+// import Home from './components/Home/Home';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { routes } from './router/routes';
+
+const router = createBrowserRouter(routes);
 
 function App() {
   return (
     <>
-      <Home />
+      <RouterProvider router={router} />
       <Footer />
     </>
   );
