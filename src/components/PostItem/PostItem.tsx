@@ -70,7 +70,7 @@ const PostItem = () => {
       <StyledP>{post.body}</StyledP>
       <ListWrapper>
         <StyledList>
-          {comments.concat(comments)?.map((comment: Comment) => (
+          {comments?.map((comment: Comment) => (
             <ListEntry key={comment.id}>
               <CommentTitle>
                 {comment.name} by{' '}
