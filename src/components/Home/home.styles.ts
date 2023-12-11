@@ -1,9 +1,29 @@
 import styled from 'styled-components';
-import { Wrapper } from '../../styles/common.styles';
+import {
+  ALIGN_ITEMS,
+  FLEX_DIRECTION,
+  JUSTIFY_CONTENT,
+  Wrapper,
+  flex,
+} from '../../styles/common.styles';
+import { Palette } from '../../styles/palette.styles';
 
 const StyledHome = styled.main`
-  height: 100%;
+  ${flex(FLEX_DIRECTION.column, JUSTIFY_CONTENT.flexStart, ALIGN_ITEMS.center)}
+
+  /* padding: 2rem; */
+  height: calc(100% - 8rem);
 `;
-const HomeWrapper = styled(Wrapper)``;
+const HomeWrapper = styled(Wrapper)`
+  flex-grow: 1;
+  box-sizing: content-box;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 100rem;
+  max-height: calc(100% - 8rem);
+
+  background-color: ${Palette.LIGHT_GRAY};
+  border-radius: 2rem;
+`;
 
 export { StyledHome, HomeWrapper };
