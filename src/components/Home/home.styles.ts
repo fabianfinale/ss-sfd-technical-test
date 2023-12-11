@@ -11,11 +11,9 @@ import { Palette } from '../../styles/palette.styles';
 const StyledHome = styled.main`
   ${flex(FLEX_DIRECTION.column, JUSTIFY_CONTENT.flexStart, ALIGN_ITEMS.center)}
 
-  /* padding: 2rem; */
   height: calc(100% - 8rem);
 `;
 const HomeWrapper = styled(Wrapper)`
-  flex-grow: 1;
   box-sizing: content-box;
   padding: 2rem;
   margin: 2rem;
