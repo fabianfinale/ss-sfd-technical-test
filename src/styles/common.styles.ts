@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Palette } from './palette.styles';
 const FLEX_DIRECTION = {
   row: 'row',
   column: 'column',

@@ -6,7 +6,6 @@ import {
   Wrapper,
   flex,
 } from '../../styles/common.styles';
-import { Palette } from '../../styles/palette.styles';
 
 const StyledHome = styled.main`
   ${flex(FLEX_DIRECTION.column, JUSTIFY_CONTENT.flexStart, ALIGN_ITEMS.center)}
