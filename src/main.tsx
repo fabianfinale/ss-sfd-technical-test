@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 
 import StylesReset from './styles/resets.styles.ts';
-import GlobalStyles from './styles/global.styles.ts';
+import { Themes } from './theme/ThemeContext.tsx';
+import ThemedApp from './ThemedApp.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <StylesReset />
-    <GlobalStyles />
-    <App />
+    <Themes>
+      <ThemedApp />
+    </Themes>
   </React.StrictMode>
 );

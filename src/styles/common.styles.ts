@@ -58,7 +58,7 @@ const StyledH1 = styled.h1``;
 const StyledH2 = styled.h2``;
 
 const StyledH3 = styled.h3`
-  color: ${Palette.OFF_WHITE};
+  color: ${({ theme }) => theme.color};
   font-size: 1.728rem;
 `;
 

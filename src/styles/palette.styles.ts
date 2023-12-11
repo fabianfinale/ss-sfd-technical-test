@@ -4,6 +4,7 @@ export const Palette = {
   DEEP_PURPLE: '#592C8F',
   OFF_WHITE: '#FCF8F2',
   WHITE: '#FFF',
-  ALPHA_WHITE: '#FFFFFF33',
+  ALPHA_WHITE: '#FFFFFFFF',
   HOVER_WHITE: '#FFFFFFD9',
+  HOVER_PURPLE: '#592C8FD9',
 };

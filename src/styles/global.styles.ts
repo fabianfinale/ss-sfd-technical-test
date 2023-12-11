@@ -30,8 +30,8 @@ body {
   font-family: 'Manrope', sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
-  color: ${Palette.OFF_WHITE};
-  background-color: ${Palette.DARK_GRAY};
+  background-color: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.color};
 }
 
 #root {
@@ -68,15 +68,16 @@ small {
 }
 
 a {
-  color: ${Palette.OFF_WHITE};
+  color: ${({ theme }) => theme.link};
+  
   text-decoration: none;
   position: relative;
 
   transition: color filter 0.3s ease;
 
   &:hover {
-    color: ${Palette.WHITE};
-    filter: drop-shadow(0 0 1rem ${Palette.HOVER_WHITE});
+    color: ${({ theme }) => theme.link};
+    filter: drop-shadow(0 0 1rem ${({ theme }) => theme.shadow});
   }
 }
 `;

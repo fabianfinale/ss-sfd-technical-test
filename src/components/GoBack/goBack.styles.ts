@@ -22,7 +22,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   font-size: 1.333rem;
-  color: ${Palette.OFF_WHITE};
+  color: ${({ theme }) => theme.link};
   text-decoration: none;
 `;
 

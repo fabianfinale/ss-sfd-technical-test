@@ -20,7 +20,7 @@ const HomeWrapper = styled(Wrapper)`
   max-width: 100rem;
   max-height: calc(100% - 8rem);
 
-  background-color: ${Palette.LIGHT_GRAY};
+  background-color: ${({ theme }) => theme.wrapper};
   border-radius: 2rem;
 `;
 
