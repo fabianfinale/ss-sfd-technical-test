@@ -1,7 +1,7 @@
 import Footer from './components/Footer/Footer';
 // import Home from './components/Home/Home';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { routes } from './router/routes';
+import { routes } from './router/Routes';
 
 const router = createBrowserRouter(routes);
 
