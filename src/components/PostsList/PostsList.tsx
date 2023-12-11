@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom';
 import useRequest from '../../hooks/useRequest';
 import { User } from '../../types/user';
 import Spinner from '../Spinner/Spinner';
