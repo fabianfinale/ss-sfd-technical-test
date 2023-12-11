@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Palette } from './palette.styles';
 const FLEX_DIRECTION = {
   row: 'row',
   column: 'column',
@@ -47,4 +48,31 @@ const Wrapper = styled.div`
   )}
 `;
 
-export { FLEX_DIRECTION, JUSTIFY_CONTENT, ALIGN_ITEMS, flex, Wrapper };
+const ListWrapper = styled(Wrapper)`
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: flex-start;
+`;
+
+const StyledH1 = styled.h1``;
+const StyledH2 = styled.h2``;
+const StyledH3 = styled.h3`
+  color: ${Palette.OFF_WHITE};
+  font-size: 1.728rem;
+`;
+const StyledList = styled.ul``;
+const ListEntry = styled.li``;
+
+export {
+  FLEX_DIRECTION,
+  JUSTIFY_CONTENT,
+  ALIGN_ITEMS,
+  flex,
+  Wrapper,
+  ListWrapper,
+  StyledH1,
+  StyledH2,
+  StyledH3,
+  StyledList,
+  ListEntry,
+};

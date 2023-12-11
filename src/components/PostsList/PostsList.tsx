@@ -4,14 +4,14 @@ import Spinner from '../Spinner/Spinner';
 import { BASE_URL, POSTS_PATH, USERS_PATH } from '../../constants/api';
 import { Post } from '../../types/posts';
 import { useMemo } from 'react';
+import { PostsListWrapper } from './postsList.styles';
+import { Link } from 'react-router-dom';
 import {
+  ListEntry,
   ListWrapper,
-  PostEntry,
-  PostsListWrapper,
   StyledH1,
   StyledList,
-} from './postsList.styles';
-import { Link } from 'react-router-dom';
+} from '../../styles/common.styles';
 
 const PostsList = () => {
   const paths = useMemo(
@@ -34,14 +34,14 @@ const PostsList = () => {
           {posts?.map((post: Post) => {
             const author = users?.find((user: User) => user.id === post.userId);
             return (
-              <PostEntry key={post.id}>
+              <ListEntry key={post.id}>
                 <p>
                   <Link to={`${POSTS_PATH}/${post.id}`}>{post.title}</Link> by{' '}
                   <Link to={`${USERS_PATH}/${post.userId}`}>
                     {author?.name || 'Unknown Author'}
                   </Link>
                 </p>
-              </PostEntry>
+              </ListEntry>
             );
           })}
         </StyledList>
