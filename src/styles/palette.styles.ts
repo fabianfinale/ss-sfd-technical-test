@@ -1,5 +1,6 @@
 export const Palette = {
   DARK_GRAY: '#171715',
+  LIGHT_GRAY: '#212121',
   DEEP_PURPLE: '#592C8F',
   OFF_WHITE: '#FCF8F2',
   WHITE: '#FFF',

@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { Palette } from './palette.styles';
-import {
-  ALIGN_ITEMS,
-  FLEX_DIRECTION,
-  JUSTIFY_CONTENT,
-  flex,
-} from './common.styles';
+import { FLEX_DIRECTION, flex } from './common.styles';
 
 const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
@@ -20,24 +15,28 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   /* 62.5% of 16px = 10px */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
   font-size: 62.5%;
 }
 
 body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
   font-family: 'Manrope', sans-serif;
   font-size: 2.4rem;
   line-height: 1.5;
   color: ${Palette.OFF_WHITE};
   background-color: ${Palette.DARK_GRAY};
-  height: 100vh;
 }
 
 #root {
-    ${flex(
-      FLEX_DIRECTION.column,
-      JUSTIFY_CONTENT.spaceBetween,
-      ALIGN_ITEMS.center
-    )}
+  ${flex(FLEX_DIRECTION.column)}
+  height: 100%;
 }
 
 h1,
@@ -66,6 +65,19 @@ p {
 
 small {
     font-size: 1.333rem;
+}
+
+a {
+  color: ${Palette.OFF_WHITE};
+  text-decoration: none;
+  position: relative;
+
+  transition: color filter 0.3s ease;
+
+  &:hover {
+    color: ${Palette.WHITE};
+    filter: drop-shadow(0 0 1rem ${Palette.HOVER_WHITE});
+  }
 }
 `;
 

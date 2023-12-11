@@ -37,7 +37,6 @@ const flex = (
   justify-content: ${mainAxisAlignment};
   align-items: ${crossAxisAlignment};
   width: 100%;
-  height: 100%;
 `;
 
 const Wrapper = styled.div`
