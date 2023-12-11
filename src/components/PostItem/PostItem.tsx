@@ -17,6 +17,7 @@ import {
   StyledH2,
   StyledH3,
   StyledList,
+  StyledP,
 } from '../../styles/common.styles';
 import {
   CommentBody,
@@ -39,10 +40,8 @@ const PostItem = () => {
   );
 
   const { data, loading, error } = useRequest<[]>(paths);
-  if (loading) return <Spinner />;
-  if (error) return <div>Error: {error}</div>;
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Spinner />;
   if (error) return <div>Error: {error}</div>;
 
   const post: Post =
@@ -68,7 +67,7 @@ const PostItem = () => {
           {author?.name || 'Unknown Author'}
         </Link>
       </StyledH3>
-      <p>{post.body}</p>
+      <StyledP>{post.body}</StyledP>
       <ListWrapper>
         <StyledList>
           {comments.concat(comments)?.map((comment: Comment) => (

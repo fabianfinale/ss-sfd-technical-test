@@ -56,10 +56,13 @@ const ListWrapper = styled(Wrapper)`
 
 const StyledH1 = styled.h1``;
 const StyledH2 = styled.h2``;
+
 const StyledH3 = styled.h3`
   color: ${Palette.OFF_WHITE};
   font-size: 1.728rem;
 `;
+
+const StyledP = styled.p``;
 const StyledList = styled.ul``;
 const ListEntry = styled.li``;
 
@@ -73,6 +76,7 @@ export {
   StyledH1,
   StyledH2,
   StyledH3,
+  StyledP,
   StyledList,
   ListEntry,
 };
