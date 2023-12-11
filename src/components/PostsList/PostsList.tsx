@@ -5,13 +5,8 @@ import { BASE_URL, POSTS_PATH, USERS_PATH } from '../../constants/api';
 import { Post } from '../../types/posts';
 import { useMemo } from 'react';
 import { PostsListWrapper } from './postsList.styles';
-import { Link } from 'react-router-dom';
-import {
-  ListEntry,
-  ListWrapper,
-  StyledH1,
-  StyledList,
-} from '../../styles/common.styles';
+import { ListWrapper, StyledH1, StyledList } from '../../styles/common.styles';
+import PostEntry from '../PostEntry/PostEntry';
 
 const PostsList = () => {
   const paths = useMemo(
@@ -33,16 +28,7 @@ const PostsList = () => {
         <StyledList>
           {posts?.map((post: Post) => {
             const author = users?.find((user: User) => user.id === post.userId);
-            return (
-              <ListEntry key={post.id}>
-                <p>
-                  <Link to={`${POSTS_PATH}/${post.id}`}>{post.title}</Link> by{' '}
-                  <Link to={`${USERS_PATH}/${post.userId}`}>
-                    {author?.name || 'Unknown Author'}
-                  </Link>
-                </p>
-              </ListEntry>
-            );
+            return <PostEntry key={post.id} post={post} author={author} />;
           })}
         </StyledList>
       </ListWrapper>
